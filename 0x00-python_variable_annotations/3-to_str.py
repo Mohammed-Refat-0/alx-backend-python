@@ -8,4 +8,4 @@ def to_str(n: float) -> str:
     n: float
     return: str
     """
-    return n.__str__
+    return n.__str__()
