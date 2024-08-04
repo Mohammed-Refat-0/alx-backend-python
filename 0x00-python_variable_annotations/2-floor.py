@@ -8,4 +8,4 @@ def floor(n: float) -> int:
     n: float
     return: int
     """
-    return int(floor(n))
+    return int(n)
