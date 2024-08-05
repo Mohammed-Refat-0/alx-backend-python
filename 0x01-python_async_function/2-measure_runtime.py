@@ -14,6 +14,6 @@ async def measure_time(n: int, max_delay: int) -> List[float]:
     returns total_time / n
     """
     start_time = time.time()
-    completed_list = await wait_n(n, max_delay)
+    await wait_n(n, max_delay)
     elapsed_time = time.time() - start_time
     return (elapsed_time/n)
