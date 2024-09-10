@@ -12,11 +12,10 @@ from typing import Dict
 class TestGithubOrgClient(unittest.TestCase):
     ''' TestGithubOrgClient testing class'''
 
-    @parameterized.expand([('google', {'login': 'google'}),
-                           ('abc', {'login': 'abc'})])
+    @parameterized.expand([('google', 'google'),
+                           ('abc', 'abc')])
     @patch('client.get_json')
-    def test_org(self, org_name: str, expected: Dict[str, str],
-                 mock_get_json) -> None:
+    def test_org(self, org_name: str, expected: str, mock_get_json) -> None:
         '''method to test that GithubOrgClient.org
            function returns the correct value.'''
 
